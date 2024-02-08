@@ -8,21 +8,23 @@ namespace Gilbo
         public Rigidbody rb;
         public float turnForce;
         public GilboEyes eyes;
+        public float threshold;
+        public float strength;
         
 
         public void Update()
         {
-            if (eyes.distanceToObj < .5f)
+            if (eyes.distanceToObj < threshold)
             {
                 turn();
             }
-           
         }
 
         public void turn()
         {
-            float turnSpeed = turnForce / eyes.distanceToObj;
-            rb.AddRelativeTorque(0,turnSpeed ,0);
+           // var turnSpeed =  / eyes.distanceToObj;
+           var angle = Vector3.SignedAngle(transform.forward, eyes.closestAngle, Vector3.up);
+           rb.AddRelativeTorque(0,-angle ,0 * strength);
         }
 
         
