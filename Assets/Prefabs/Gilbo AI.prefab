@@ -216,6 +216,9 @@ GameObject:
   - component: {fileID: -8493205479734148461}
   - component: {fileID: 1629936538967579178}
   - component: {fileID: 4658910014826957382}
+  - component: {fileID: -3538547683224448667}
+  - component: {fileID: 4507794577628379365}
+  - component: {fileID: 6278844655412416744}
   m_Layer: 3
   m_Name: Gilbo AI
   m_TagString: GilboAI
@@ -321,7 +324,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1426743148728571830}
   speed: 25
-  eyes: {fileID: -8493205479734148461}
   threshold: 500
 --- !u!114 &2192405809255617873
 MonoBehaviour:
@@ -337,7 +339,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1426743148728571830}
   turnForce: 10
-  eyes: {fileID: -8493205479734148461}
   threshold: 2
   strength: 2
   distance: 0
@@ -354,7 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rays: 10
-  maxAngle: 170
+  maxAngle: 140
   closestAngle: {x: 0, y: 0, z: 0}
   mask:
     serializedVersion: 2
@@ -392,5 +393,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec4b5d71bdfafd4c92ea7661017ac32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyes: {fileID: -8493205479734148461}
   friends: []
+--- !u!114 &-3538547683224448667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7713118268970363912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148ded7d24c9c0945b7add5d98abc776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 10
+  target: {x: 0, y: 0, z: 0}
+--- !u!114 &4507794577628379365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7713118268970363912}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1c5b7d5c1e3ed747bd12b23eedb0a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 5
+--- !u!114 &6278844655412416744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7713118268970363912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d618d8e6285a04a8ca7d9f429424d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 5

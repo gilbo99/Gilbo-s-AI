@@ -8,7 +8,7 @@ namespace Gilbo
     public class Neighbours : MonoBehaviour
     {
         
-        public List<GameObject> friends;
+        public List<Transform> friends;
 
         private GilboEyes eyes;
         public void Start()
@@ -18,6 +18,7 @@ namespace Gilbo
 
         public void FixedUpdate()
         {
+            friends.Clear();
             for (int i = 0; i < eyes.obstacles.Count; i++)
             {
                 if (eyes.obstacles[i].GetComponent<GilboEyes>())
@@ -29,7 +30,7 @@ namespace Gilbo
 
         public void AddFriends(GameObject fri)
         {
-            
+            friends.Add(fri.transform);
         }
     }
     

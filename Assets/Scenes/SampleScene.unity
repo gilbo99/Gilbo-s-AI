@@ -1902,7 +1902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gilboAI: {fileID: 7713118268970363912, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
-  amount: 200
+  amount: 600
 --- !u!1 &1240115445
 GameObject:
   m_ObjectHideFlags: 0

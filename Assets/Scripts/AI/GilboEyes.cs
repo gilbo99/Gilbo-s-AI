@@ -32,30 +32,25 @@ namespace Gilbo
             {
                 float spreadAngle = -maxAngle / (rays - 1);
                 Vector3 dir = Quaternion.Euler(0, i * spreadAngle, 0) * transform.forward;
-                if (Physics.Raycast(transform.position, dir, out hit, range, mask))
+                if (Physics.Raycast(transform.position, dir, out hit, range, mask, QueryTriggerInteraction.Collide))
                 {
                     if (distance >= hit.distance)
                     {
                         distance = hit.distance;
                         closestAngle = dir; 
-                        Debug.DrawRay(transform.position, dir * range, Color.green);
+                        //Debug.DrawRay(transform.position, dir * range, Color.green);
                     }
                     
                     Seeing(hit.transform.gameObject);
                 }
-
-
-
-
-
-                
             }
             
         }
 
         private void Seeing(GameObject obj)
         {
-            
+         // obstacles.Contains()
+         
             obstacles.Add(obj);
             
         }
