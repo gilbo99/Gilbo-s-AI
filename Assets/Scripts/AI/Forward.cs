@@ -18,21 +18,21 @@ namespace Gilbo
         }
         public void FixedUpdate()
         {
-            /*
-            if (eyes.distanceToObj < threshold )
+            
+            if (eyes.distance > threshold )
             {
                 rb.AddForce(transform.forward * speed);
                 
             }
             else
             {
-                rb.AddForce(-transform.forward * speed / eyes.distanceToObj);
+                rb.AddForce(-transform.forward * speed / eyes.distance);
             }
-            */
             
             
             
-            rb.AddForce(transform.forward * speed);
+            
+            
 
         }
         

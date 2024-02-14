@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Gilbo;
 using UnityEngine;
 
 namespace Gilbo

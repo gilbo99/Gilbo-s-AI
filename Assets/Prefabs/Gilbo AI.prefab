@@ -249,7 +249,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7713118268970363912}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3b1586153b25c943ad3926b32220261, type: 3}
   m_Name: 
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1426743148728571830}
   speed: 25
-  threshold: 500
+  threshold: 2
 --- !u!114 &2192405809255617873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +341,6 @@ MonoBehaviour:
   turnForce: 10
   threshold: 2
   strength: 2
-  distance: 0
 --- !u!114 &-8493205479734148461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,7 +414,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7713118268970363912}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1c5b7d5c1e3ed747bd12b23eedb0a4f, type: 3}
   m_Name: 

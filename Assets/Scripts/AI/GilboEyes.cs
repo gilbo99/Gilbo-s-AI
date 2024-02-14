@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Gilbo
@@ -21,7 +20,11 @@ namespace Gilbo
 
         public List<GameObject> obstacles;
 
-        
+        public void Start()
+        {
+            distance = range;
+        }
+
 
         public void FixedUpdate()
         {
@@ -38,8 +41,9 @@ namespace Gilbo
                     {
                         distance = hit.distance;
                         closestAngle = dir; 
-                        //Debug.DrawRay(transform.position, dir * range, Color.green);
                     }
+                    
+                    
                     
                     Seeing(hit.transform.gameObject);
                 }

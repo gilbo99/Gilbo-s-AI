@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -543,6 +543,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 775322664}
   m_LocalEulerAnglesHint: {x: 0, y: 99.633, z: 0}
+--- !u!1001 &318066074
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -1339941377541826630, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: offset
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1339941377541826630, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: strength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1339941377541826630, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: pursuitTarget
+      value: 
+      objectReference: {fileID: 1953797086}
+    - target: {fileID: 1122025389943071446, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491476374064461371, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: m_Name
+      value: Gilbo AI Pursuit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367383901398469339, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391990395155122793, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.784592
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391990395155122793, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391990395155122793, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -31.282467
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391990395155122793, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391990395155122793, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391990395155122793, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391990395155122793, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391990395155122793, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391990395155122793, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391990395155122793, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221215671681944406, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f6d11c6505038d46bf33b54deee654d, type: 3}
 --- !u!1 &353616587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,6 +1829,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 775322664}
   m_LocalEulerAnglesHint: {x: 0, y: 135.769, z: 0}
+--- !u!1001 &941750104
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5001966056475463770, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.555893
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001966056475463770, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001966056475463770, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -27.383327
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001966056475463770, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001966056475463770, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001966056475463770, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001966056475463770, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001966056475463770, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001966056475463770, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001966056475463770, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331151074144961843, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713118268970363912, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
+      propertyPath: m_Name
+      value: Gilbo AI
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
 --- !u!1 &1065676885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,7 +2044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gilboAI: {fileID: 7713118268970363912, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
-  amount: 600
+  amount: 400
 --- !u!1 &1240115445
 GameObject:
   m_ObjectHideFlags: 0
@@ -2953,6 +3095,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881678673}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1953797086 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5001966056475463770, guid: 5e78cbf756136324696d5c96d70e0be6, type: 3}
+  m_PrefabInstance: {fileID: 941750104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1963549817
 GameObject:
   m_ObjectHideFlags: 0
@@ -3425,6 +3572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 9138700605640728484, guid: d43df824b796ba144b0a379cb5ad5cf2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3440,3 +3591,5 @@ SceneRoots:
   - {fileID: 775322664}
   - {fileID: 5520107227377978746}
   - {fileID: 1107392862}
+  - {fileID: 941750104}
+  - {fileID: 318066074}

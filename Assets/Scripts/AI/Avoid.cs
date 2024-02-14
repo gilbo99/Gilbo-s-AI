@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Gilbo
@@ -10,8 +9,7 @@ namespace Gilbo
         public float turnForce;
         public float threshold;
         public float strength;
-        [SerializeField]
-        private float distance;
+        
         
         private GilboEyes eyes;
         public void Start()
@@ -32,8 +30,9 @@ namespace Gilbo
         private void turn()
         {
            // var turnSpeed =  / eyes.distanceToObj;
-           var angle = Vector3.SignedAngle(transform.forward, eyes.closestAngle, Vector3.up);
-           rb.AddRelativeTorque(0,turnForce * -angle * strength,0 );
+           var angle = Vector3.SignedAngle(transform.forward, eyes.closestAngle.normalized, Vector3.up);
+           rb.AddRelativeTorque(0, (-angle * strength) / eyes.distance,0 );
+           
         }
     
         
