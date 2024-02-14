@@ -8,12 +8,17 @@ namespace Gilbo
     {
         public Rigidbody rb;
         public float speed;
-        public GilboEyes eyes;
+       
         public float threshold;
 
-
+        private GilboEyes eyes;
+        public void Start()
+        {
+            eyes = GetComponent<GilboEyes>();
+        }
         public void FixedUpdate()
         {
+            /*
             if (eyes.distanceToObj < threshold )
             {
                 rb.AddForce(transform.forward * speed);
@@ -23,9 +28,14 @@ namespace Gilbo
             {
                 rb.AddForce(-transform.forward * speed / eyes.distanceToObj);
             }
+            */
             
+            
+            
+            rb.AddForce(transform.forward * speed);
 
         }
+        
 
 
        

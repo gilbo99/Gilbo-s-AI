@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4400322893877623977}
   - component: {fileID: 8184384379762426}
   - component: {fileID: 5638317729760498688}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6348672470430114514}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 5079449926364533630}
   - component: {fileID: 3278797188036477143}
   - component: {fileID: 1947105343518944643}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,9 +215,10 @@ GameObject:
   - component: {fileID: 2192405809255617873}
   - component: {fileID: -8493205479734148461}
   - component: {fileID: 1629936538967579178}
-  m_Layer: 0
+  - component: {fileID: 4658910014826957382}
+  m_Layer: 3
   m_Name: Gilbo AI
-  m_TagString: Untagged
+  m_TagString: GilboAI
   m_Icon: {fileID: 2800000, guid: 9aebd705574f9e642aef1e5f59b3e4d8, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,10 +253,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perlin: 0
   rb: {fileID: 1426743148728571830}
-  speed: 10
+  speed: 5
   offset: 10.11
-  minOffset: -99999
-  maxOffset: 99999
+  minOffset: 1000
+  maxOffset: -1000
 --- !u!54 &1426743148728571830
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -338,7 +339,8 @@ MonoBehaviour:
   turnForce: 10
   eyes: {fileID: -8493205479734148461}
   threshold: 2
-  strength: 10
+  strength: 2
+  distance: 0
 --- !u!114 &-8493205479734148461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,14 +353,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2068e37b25e0b0d4f9d70b07a132a56e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rays: 20
+  rays: 10
   maxAngle: 170
   closestAngle: {x: 0, y: 0, z: 0}
   mask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 72
   range: 5
-  distanceToObj: 10
+  distance: 0
+  obstacles:
+  - {fileID: 0}
 --- !u!114 &1629936538967579178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,3 +380,17 @@ MonoBehaviour:
   turnSpeed: 5
   strength: 5
   angle: 0
+--- !u!114 &4658910014826957382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7713118268970363912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec4b5d71bdfafd4c92ea7661017ac32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eyes: {fileID: -8493205479734148461}
+  friends: []

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Gilbo
@@ -7,26 +8,34 @@ namespace Gilbo
         [SerializeField]
         public Rigidbody rb;
         public float turnForce;
-        public GilboEyes eyes;
         public float threshold;
         public float strength;
+        [SerializeField]
+        private float distance;
         
+        private GilboEyes eyes;
+        public void Start()
+        {
+            eyes = GetComponent<GilboEyes>();
+        }
+       
 
         public void Update()
         {
-            if (eyes.distanceToObj < threshold)
+
+            if (eyes.distance < threshold)
             {
-                turn();
+                turn();   
             }
         }
 
-        public void turn()
+        private void turn()
         {
            // var turnSpeed =  / eyes.distanceToObj;
            var angle = Vector3.SignedAngle(transform.forward, eyes.closestAngle, Vector3.up);
-           rb.AddRelativeTorque(0,-angle ,0 * strength);
+           rb.AddRelativeTorque(0,turnForce * -angle * strength,0 );
         }
-
+    
         
     }
 }
