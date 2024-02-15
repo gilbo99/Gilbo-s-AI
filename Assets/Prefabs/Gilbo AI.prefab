@@ -108,7 +108,7 @@ Transform:
   m_GameObject: {fileID: 2692598584794260014}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.42166963, y: 0.73191994, z: 1.628848}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -142,7 +142,7 @@ Transform:
   m_GameObject: {fileID: 2983909824552637777}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.42166963, y: -0.73191994, z: -1.628848}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 8615247507195395851}
   - component: {fileID: 2192405809255617873}
   - component: {fileID: -8493205479734148461}
+  - component: {fileID: 5963212963671070867}
   - component: {fileID: 1629936538967579178}
   - component: {fileID: 4658910014826957382}
   - component: {fileID: -3538547683224448667}
@@ -235,7 +236,7 @@ Transform:
   m_GameObject: {fileID: 7713118268970363912}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.08, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -249,7 +250,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7713118268970363912}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3b1586153b25c943ad3926b32220261, type: 3}
   m_Name: 
@@ -353,16 +354,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2068e37b25e0b0d4f9d70b07a132a56e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rays: 10
+  rb: {fileID: 0}
+  size: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  rays: 20
   maxAngle: 140
   closestAngle: {x: 0, y: 0, z: 0}
   mask:
     serializedVersion: 2
     m_Bits: 72
-  range: 5
+  range: 1000
+  eyeRate: 0.01
   distance: 0
   obstacles:
   - {fileID: 0}
+--- !u!114 &5963212963671070867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7713118268970363912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb0aa75aa95349f40bc3183fb4f8a765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perception: 0
+  eyeDistance: 1
+  eyeSize: 1
+  view: []
 --- !u!114 &1629936538967579178
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,9 +20,16 @@ namespace Gilbo
             friends.Clear();
             for (int i = 0; i < eyes.obstacles.Count; i++)
             {
-                if (eyes.obstacles[i].GetComponent<GilboEyes>())
+                if (eyes.obstacles[i] != null )
                 {
-                    AddFriends(eyes.obstacles[i]);
+                    if (eyes.obstacles[i].GetComponent<GilboEyes>())
+                    {
+
+
+                        AddFriends(eyes.obstacles[i]);
+                        
+                        
+                    }
                 }
             }
         }

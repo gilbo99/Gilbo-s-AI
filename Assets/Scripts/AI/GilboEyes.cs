@@ -1,18 +1,25 @@
-using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Gilbo
 {
     [SelectionBase]
-    public class GilboEyes : MonoBehaviour
+    public class GilboEyes : GilboBot
     {
+        [Range(0, 50)]
         public int rays = 2;
+        [Range(0, 380f)]
         public float maxAngle = 90f;
         public Vector3 closestAngle;
         public LayerMask mask;
         public float range;
         private RaycastHit hit;
+        [Range(0, 5f)]
+        public float eyeRate;
+
+        private Perception perception;
 
 
 
@@ -22,43 +29,41 @@ namespace Gilbo
 
         public void Start()
         {
+            perception = GetComponent<Perception>();
             distance = range;
+            eyeRate += Random.Range(0f, 3f);
+            StartCoroutine(nameof(See));
         }
 
 
-        public void FixedUpdate()
+        IEnumerator See()
         {
-            obstacles.Clear();
-            
-            distance = range;
-            for (int i = -rays / 2; i < rays / 2; i++)
+            while (true)
             {
-                float spreadAngle = -maxAngle / (rays - 1);
-                Vector3 dir = Quaternion.Euler(0, i * spreadAngle, 0) * transform.forward;
-                if (Physics.Raycast(transform.position, dir, out hit, range, mask, QueryTriggerInteraction.Collide))
+                perception.ClearList();
+
+                distance = range;
+                for (int i = -rays / 2; i < rays / 2; i++)
                 {
-                    if (distance >= hit.distance)
+                    float spreadAngle = -maxAngle / (rays - 1);
+                    Vector3 dir = Quaternion.Euler(0, i * spreadAngle, 0) * transform.forward;
+                    if (Physics.Raycast(transform.position, dir, out hit, range, mask, QueryTriggerInteraction.Collide))
                     {
-                        distance = hit.distance;
-                        closestAngle = dir; 
+                        if (distance >= hit.distance)
+                        {
+                            distance = hit.distance;
+                            closestAngle = dir;
+                        }
+
+                        perception.CheckObject(hit.transform.gameObject, hit.distance);
                     }
-                    
-                    
-                    
-                    Seeing(hit.transform.gameObject);
                 }
+                
+                yield return new WaitForSeconds(eyeRate);
             }
-            
         }
 
-        private void Seeing(GameObject obj)
-        {
-         // obstacles.Contains()
-         
-            obstacles.Add(obj);
-            
-        }
+        
 
-       
     }
 }

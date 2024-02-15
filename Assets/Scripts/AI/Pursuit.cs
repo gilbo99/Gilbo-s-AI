@@ -24,7 +24,7 @@ namespace Gilbo
         public void FixedUpdate()
         {
             Vector3 target = CalculateNeighbours(pursuitTarget);
-            rb.AddForce(target * strength, ForceMode.Force);
+            rb.AddTorque(0,target.y * strength,0, ForceMode.Acceleration);
             
         }
         
