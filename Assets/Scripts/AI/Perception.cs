@@ -14,7 +14,7 @@ namespace Gilbo
 
         public List<GameObject> view;
 
-        public void Start()
+        public void OnEnable()
         {
             eyes.GetComponent<GilboEyes>();
             

@@ -8,7 +8,7 @@ namespace Gilbo
         public Rigidbody rb;
         public Vector3 size;
         
-        void Start()
+        void OnEnable()
         {
             if (GetComponent<Rigidbody>() != null)
             {
