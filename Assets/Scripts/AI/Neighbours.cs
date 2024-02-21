@@ -8,25 +8,27 @@ namespace Gilbo
     {
         
         public List<Transform> friends;
+        private Perception perception;
 
         private GilboEyes eyes;
         public void Start()
         {
-            eyes = GetComponent<GilboEyes>();
+            perception = GetComponent<Perception>();
+
         }
 
         public void FixedUpdate()
         {
             friends.Clear();
-            for (int i = 0; i < eyes.obstacles.Count; i++)
+            for (int i = 0; i < perception.view.Count; i++)
             {
-                if (eyes.obstacles[i] != null )
+                if (perception.view[i] != null )
                 {
-                    if (eyes.obstacles[i].GetComponent<GilboEyes>())
+                    if (perception.view[i].GetComponent<GilboEyes>())
                     {
 
 
-                        AddFriends(eyes.obstacles[i]);
+                        AddFriends(perception.view[i]);
                         
                         
                     }

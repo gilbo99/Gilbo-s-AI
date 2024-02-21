@@ -7,6 +7,7 @@ namespace Gilbo
         
         public Rigidbody rb;
         public Vector3 size;
+        public float sqrmag;
         
         void OnEnable()
         {
@@ -16,6 +17,9 @@ namespace Gilbo
             }
             
             size = GetComponent<Collider>().bounds.size;
+
+            sqrmag = size.sqrMagnitude;
+
         }
 
     }

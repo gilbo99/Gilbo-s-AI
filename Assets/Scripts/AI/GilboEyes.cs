@@ -19,13 +19,14 @@ namespace Gilbo
         [Range(0, 5f)]
         public float eyeRate;
 
+        private int hits;
+
         private Perception perception;
 
 
 
         public float distance;
-
-        public List<GameObject> obstacles;
+        
 
         public void Start()
         {
@@ -55,7 +56,7 @@ namespace Gilbo
                             closestAngle = dir;
                         }
 
-                        perception.CheckObject(hit.transform.gameObject, hit.distance);
+                        perception.CheckObject(hit.collider.gameObject, hit.distance);
                     }
                 }
                 

@@ -16,7 +16,7 @@ namespace Gilbo
 
         public void OnEnable()
         {
-            eyes.GetComponent<GilboEyes>();
+            eyes = GetComponent<GilboEyes>();
             
         }
 
@@ -40,7 +40,7 @@ namespace Gilbo
         private bool CheckDistance(GameObject obj, float distance)
         {
 
-            if (distance > eyeDistance)
+            if (distance < eyeDistance)
             {
                 return true;
             }
@@ -49,8 +49,17 @@ namespace Gilbo
         
         private bool CheckSize(GameObject obj)
         {
-            if (obj.GetComponent<GilboBot>().size.sqrMagnitude > eyeSize)
+            
+            
+            if (obj.GetComponent<GilboBot>() == null)
             {
+                return false;
+            }
+            
+            
+            if (obj.GetComponent<GilboBot>().size.sqrMagnitude < eyeSize)
+            {
+                Debug.Log(obj.GetComponent<GilboBot>().size.sqrMagnitude);
                 return true;
             }
             return false;
