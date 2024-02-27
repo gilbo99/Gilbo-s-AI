@@ -9,6 +9,7 @@ namespace Gilbo
         private GilboEyes eyes;
         private Rigidbody rb;
         public float strength;
+        public Vector3 target;
 
         public void Start()
         {
@@ -20,8 +21,8 @@ namespace Gilbo
 
         public void FixedUpdate()
         {
-            Vector3 target = CalculateNeighbours(neighbours.friends);
-            rb.AddForce(target * strength, ForceMode.Force);
+            target = CalculateNeighbours(neighbours.friends) * strength;
+            rb.AddForce(target, ForceMode.Force);
 
         }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ namespace Gilbo
         
         public List<Transform> friends;
         private Perception perception;
+        public float distance;
 
         private GilboEyes eyes;
         public void Start()
@@ -27,8 +29,11 @@ namespace Gilbo
                     if (perception.view[i].GetComponent<GilboEyes>())
                     {
 
-
-                        AddFriends(perception.view[i]);
+                        if (distance > Vector3.Distance(perception.view[i].transform.position , transform.position))
+                        {
+                            AddFriends(perception.view[i]);
+                        }
+                        
                         
                         
                     }
@@ -39,6 +44,17 @@ namespace Gilbo
         public void AddFriends(GameObject fri)
         {
             friends.Add(fri.transform);
+        }
+
+        private void OnDrawGizmos()
+        {
+            
+            for (int i = 0; i < friends.Count; i++)
+            {
+                Gizmos.color = Color.red;
+                Gizmos.DrawLine(transform.position, friends[i].transform.position);
+            }
+            
         }
     }
     

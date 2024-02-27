@@ -356,6 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   size: {x: 0, y: 0, z: 0}
+  sqrmag: 0
   velocity: {x: 0, y: 0, z: 0}
   rays: 20
   maxAngle: 140
@@ -366,8 +367,6 @@ MonoBehaviour:
   range: 1000
   eyeRate: 0.01
   distance: 0
-  obstacles:
-  - {fileID: 0}
 --- !u!114 &5963212963671070867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,8 +380,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   perception: 0
-  eyeDistance: 1
-  eyeSize: 1
+  eyeDistance: 10
+  eyeSize: 800
   view: []
 --- !u!114 &1629936538967579178
 MonoBehaviour:
@@ -414,6 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friends: []
+  distance: 8
 --- !u!114 &-3538547683224448667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength: 5
+  target: {x: 0, y: 0, z: 0}
 --- !u!114 &6278844655412416744
 MonoBehaviour:
   m_ObjectHideFlags: 0

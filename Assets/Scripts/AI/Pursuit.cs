@@ -13,6 +13,7 @@ namespace Gilbo
         private Neighbours neighbours;
         private Rigidbody rb;
 
+        public Vector3 target;
 
         public Vector3 draw;
         public void Start()
@@ -25,7 +26,7 @@ namespace Gilbo
         public void FixedUpdate()
         {
             
-            Vector3 target = CalculateNeighbours(pursuitTarget);
+            target = CalculateNeighbours(pursuitTarget);
             if (target != Vector3.zero)
             {
                 draw = target;
